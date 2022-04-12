@@ -25,15 +25,15 @@ The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit int
  * @param {number[]} nums
  * @return {number}
  */
- var maxProduct = function(nums) {
-     let max = nums[0], curMax = 1, curMin = 1;
-     for( let num of nums) {
-         if (num < 0) {
+var maxProduct = function (nums) {
+    let max = nums[0], curMax = 1, curMin = 1;
+    for (let num of nums) {
+        if (num < 0) {
             [curMax, curMin] = [curMin, curMax];
-         }
-         curMax = Math.max(curMax * num, num);
-         curMin = Math.min(curMin * num, num);
-         max = Math.max(max, curMax);
-     }
-     return max;
+        }
+        curMax = Math.max(curMax * num, num);
+        curMin = Math.min(curMin * num, num);
+        max = Math.max(max, curMax);
+    }
+    return max;
 };

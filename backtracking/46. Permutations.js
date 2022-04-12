@@ -15,7 +15,7 @@ Example 3:
 
 Input: nums = [1]
 Output: [[1]]
- 
+
 Constraints:
 
 1 <= nums.length <= 6
@@ -26,7 +26,7 @@ All the integers of nums are unique.
  * @param {number[]} nums
  * @return {number[][]}
  */
-var permute = function(nums) {
+var permute = function (nums) {
   const used = new Set();
   const res = [];
   let dfs = (path) => {

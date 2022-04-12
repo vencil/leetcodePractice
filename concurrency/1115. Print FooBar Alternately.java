@@ -20,7 +20,7 @@ thread A will call foo(), while
 thread B will call bar().
 Modify the given program to output "foobar" n times.
 
- 
+
 
 Example 1:
 
@@ -34,7 +34,7 @@ Example 2:
 Input: n = 2
 Output: "foobarfoobar"
 Explanation: "foobar" is being output 2 times.
- 
+
 
 Constraints:
 
@@ -50,7 +50,7 @@ class FooBar {
     }
 
     public void foo(Runnable printFoo) throws InterruptedException {
-        
+
         for (int i = 0; i < n; i++) {
             fooSemaphore.acquire();
         	// printFoo.run() outputs "foo". Do not change or remove this line.
@@ -60,7 +60,7 @@ class FooBar {
     }
 
     public void bar(Runnable printBar) throws InterruptedException {
-        
+
         for (int i = 0; i < n; i++) {
             barSemaphore.acquire();
             // printBar.run() outputs "bar". Do not change or remove this line.

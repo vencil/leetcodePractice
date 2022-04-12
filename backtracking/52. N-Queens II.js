@@ -13,7 +13,7 @@ Example 2:
 
 Input: n = 1
 Output: 1
- 
+
 Constraints:
 
 1 <= n <= 9
@@ -22,21 +22,21 @@ Constraints:
  * @param {number} n
  * @return {number}
  */
-var totalNQueens = function(n) {
+var totalNQueens = function (n) {
   let ans = 0;
   const cols = new Set();
   const diag1 = new Set();
   const diag2 = new Set();
-  
+
   const helper = (row) => {
     if (row === n) {
       ans++;
     } else {
       for (let col = 0; col < n; col++) {
         // 直行橫列正反斜對角都不能有
-        if (!cols.has(col) && !diag1.has(row + col) && !diag2.has(row - col)) { 
-          cols.add(col);   
-          diag1.add(row + col); 
+        if (!cols.has(col) && !diag1.has(row + col) && !diag2.has(row - col)) {
+          cols.add(col);
+          diag1.add(row + col);
           diag2.add(row - col);
           helper(row + 1);
           cols.delete(col);

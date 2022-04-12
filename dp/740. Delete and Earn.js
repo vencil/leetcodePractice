@@ -22,7 +22,7 @@ Explanation: You can perform the following operations:
 - Delete a 3 again to earn 3 points. nums = [3].
 - Delete a 3 once more to earn 3 points. nums = [].
 You earn a total of 9 points.
- 
+
 
 Constraints:
 
@@ -33,8 +33,8 @@ Constraints:
  * @param {number[]} nums
  * @return {number}
  */
- // 打家劫舍變化型，等於禁止搶連續店家
-var deleteAndEarn = function(nums) {
+// 打家劫舍變化型，等於禁止搶連續店家
+var deleteAndEarn = function (nums) {
     const max = Math.max(...nums);
     let counts = new Array(max + 1);
     counts.fill(0);

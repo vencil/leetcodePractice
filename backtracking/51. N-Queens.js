@@ -13,7 +13,7 @@ Example 2:
 
 Input: n = 1
 Output: [["Q"]]
- 
+
 
 Constraints:
 
@@ -23,7 +23,7 @@ Constraints:
  * @param {number} n
  * @return {string[][]}
  */
-var solveNQueens = function(n) {
+var solveNQueens = function (n) {
   const ans = [];
   const board = new Array(n);
   for (let i = 0; i < n; i++) {
@@ -43,13 +43,13 @@ var solveNQueens = function(n) {
     } else {
       for (let col = 0; col < n; col++) {
         // 直行橫列正反斜對角都不能有
-        if (!cols.has(col) && !diag1.has(row + col) && !diag2.has(row - col)) { 
-          board[row][col] = 'Q'; 
-          cols.add(col);   
-          diag1.add(row + col); 
+        if (!cols.has(col) && !diag1.has(row + col) && !diag2.has(row - col)) {
+          board[row][col] = 'Q';
+          cols.add(col);
+          diag1.add(row + col);
           diag2.add(row - col);
           helper(row + 1);
-          board[row][col] = '.'; 
+          board[row][col] = '.';
           cols.delete(col);
           diag1.delete(row + col);
           diag2.delete(row - col);

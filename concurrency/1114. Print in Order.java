@@ -12,7 +12,7 @@ Note:
 
 We do not know how the threads will be scheduled in the operating system, even though the numbers in the input seem to imply the ordering. The input format you see is mainly to ensure our tests' comprehensiveness.
 
- 
+
 
 Example 1:
 
@@ -25,7 +25,7 @@ Example 2:
 Input: nums = [1,3,2]
 Output: "firstsecondthird"
 Explanation: The input [1,3,2] means thread A calls first(), thread B calls third(), and thread C calls second(). "firstsecondthird" is the correct output.
- 
+
 
 Constraints:
 
@@ -42,7 +42,7 @@ class Foo {
     }
 
     public void first(Runnable printFirst) throws InterruptedException {
-        
+
         // printFirst.run() outputs "first". Do not change or remove this line.
         printFirst.run();
         semaphoreFirst.release(); // now semaphoreFirst become Semaphore(1)

@@ -3,7 +3,7 @@ You are given an integer array nums. You are initially positioned at the array's
 
 Return true if you can reach the last index, or false otherwise.
 
- 
+
 
 Example 1:
 
@@ -15,7 +15,7 @@ Example 2:
 Input: nums = [3,2,1,0,4]
 Output: false
 Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.
- 
+
 
 Constraints:
 
@@ -26,7 +26,7 @@ Constraints:
  * @param {number[]} nums
  * @return {boolean}
  */
-var canJump = function(nums) {
+var canJump = function (nums) {
     let maxReach = nums[0];
     for (let i = 1, len = nums.length; i < len; i++) {
         if (maxReach >= len) return true;

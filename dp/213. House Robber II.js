@@ -21,7 +21,7 @@ Example 3:
 
 Input: nums = [1,2,3]
 Output: 3
- 
+
 
 Constraints:
 
@@ -32,11 +32,11 @@ Constraints:
  * @param {number[]} nums
  * @return {number}
  */
-var rob = function(nums) {
+var rob = function (nums) {
     const len = nums.length;
     if (len === 0) return 0;
     if (len === 1) return nums[0];
-    return Math.max(maxRob(nums.slice(0, len -1)), maxRob(nums.slice(1, len)));
+    return Math.max(maxRob(nums.slice(0, len - 1)), maxRob(nums.slice(1, len)));
 };
 
 var maxRob = function (nums) {

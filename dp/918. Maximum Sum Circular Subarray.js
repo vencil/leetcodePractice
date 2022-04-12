@@ -22,7 +22,7 @@ Example 3:
 Input: nums = [-3,-2,-3]
 Output: -2
 Explanation: Subarray [-2] has maximum sum -2.
- 
+
 
 Constraints:
 
@@ -45,8 +45,8 @@ n == nums.length
  * @param {number[]} nums
  * @return {number}
  */
-var maxSubarraySumCircular = function(nums) {
-    let sum = 0, max = nums[0], min = nums[0], curMax = 0, curMin = 0;
+var maxSubarraySumCircular = function (nums) {
+	let sum = 0, max = nums[0], min = nums[0], curMax = 0, curMin = 0;
 	for (let num of nums) {
 		sum += num;
 		curMax = Math.max(curMax + num, num);

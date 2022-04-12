@@ -7,7 +7,7 @@ Your goal is to reach the last index in the minimum number of jumps.
 
 You can assume that you can always reach the last index.
 
- 
+
 
 Example 1:
 
@@ -18,7 +18,7 @@ Example 2:
 
 Input: nums = [2,3,0,1,4]
 Output: 2
- 
+
 
 Constraints:
 
@@ -30,7 +30,7 @@ Constraints:
  * @return {number}
  */
 // 重點是最少跳躍，而且題目假定一定跳的到，所以只要碰到跳不動的地方再來更新最長跳動距離即可
-var jump = function(nums) {
+var jump = function (nums) {
     let maxReach = 0;
     let edge = 0;
     let count = 0;
