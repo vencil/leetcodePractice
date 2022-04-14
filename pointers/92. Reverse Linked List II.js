@@ -1,5 +1,5 @@
 /*
-Given the head of a singly linked list and two integers left and right where left <= right, 
+Given the head of a singly linked list and two integers left and right where left <= right,
 reverse the nodes of the list from position left to position right, and return the reversed list.
 
 Example 1:
@@ -45,7 +45,7 @@ var reverseBetween = function(head, left, right) {
     for (let i = left; i < right; i++) {
         movedNode = rightBorder.next;
         rightBorder.next = movedNode.next;
-        
+
         movedNode.next = leftBorder.next;
         leftBorder.next = movedNode;
     }
