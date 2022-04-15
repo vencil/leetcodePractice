@@ -30,7 +30,7 @@ nums is sorted in ascending order.
 var search = function (nums, target) {
     let high = nums.length - 1, low = 0;
     while (low <= high) {
-        let mid = low + Math.floor((high - low) / 2);
+        let mid = low + Math.floor((high - low) / 2); // avoid overflow = (left + right)/2
         if (nums[mid] === target) {
             return mid;
         } else if (nums[mid] < target) {
